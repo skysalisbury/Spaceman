@@ -1,35 +1,38 @@
  /*----- constants -----*/
 // Going to need at least one object or will I? 
-const categories = {
+const U_FAILED = 6;
+const CATEGORIES = {
     JavaScript: ['EVENTS', 'VARIABLES', 'OBJECTS', 'FUNCTIONS'],
     CSS: ['FLEXBOX', 'MARGINS', 'BORDERS', 'TRANSFORM']
 };
-// const category = prompt('Pick a category: JavaScript or CSS');
-const secretWord = words[Math.floor(Math.random() * words.length)];
-console.log(secretWord);
 
-  /*----- state variables -----*/
+console.log('words', words);
+/*----- state variables -----*/
 let winner;
 let board;
 let wrongGuess;
+let secretWord;
+let category;
 
-  /*----- cached elements  -----*/
-  const msgEl = document.querySelector('h1');
-  const letterBtns = [...document.querySelectorAll('#abc-container > button')];
-  const playAgainBtn = document.getElementById('play-again');
+/*----- cached elements  -----*/
+const msgEl = document.querySelector('h1');
+const letterBtns = [...document.querySelectorAll('#abc-container > button')];
+const playAgainBtn = document.getElementById('play-again');
+const words = categories[category];
 
-  /*----- event listeners -----*/
+/*----- event listeners -----*/
 
 
-  /*----- functions -----*/
+/*----- functions -----*/
 init();
 
 function init() {
-   secretWord = [
-
-   ]
     
-
+    
+    
+    category = 
+    secretWord = words[Math.floor(Math.random() * words.length)];
+    
     render();
 };
 
@@ -53,8 +56,8 @@ function renderMessage() {
         msgEl.innerHTML = `My other arm!`;
     } if (wrongGuess === 5) {
         msgEl.innerHTML = `I just wanted to go to space is this how it ends?!`;
-    } if (wrongGuess === 6) {
-        msgEl.innerHTML = `You lose, how could you do that to an astronaut!`;
+    } if (wrongGuess === U_FAILED) {
+        msgEl.innerHTML = `YOU FAILED, how could you let this happen to the astronaut!`;
     }
     
 };
