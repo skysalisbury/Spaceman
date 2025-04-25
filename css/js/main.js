@@ -1,10 +1,17 @@
  /*----- constants -----*/
 // Going to need at least one object or will I? 
+const categories = {
+    JavaScript: ['EVENTS', 'VARIABLES', 'OBJECTS', 'FUNCTIONS'],
+    CSS: ['FLEXBOX', 'MARGINS', 'BORDERS', 'TRANSFORM']
+};
+const category = prompt('Pick a category: JavaScript or CSS');
+
+const secretWord = words[Math.floor(Math.random() * words.length)];
+console.log(secretWord);
 
   /*----- state variables -----*/
 let winner;
 let board;
-let secretWord;
 let wrongGuess;
 
   /*----- cached elements  -----*/
@@ -19,7 +26,9 @@ let wrongGuess;
 init();
 
 function init() {
-   
+   secretWord = [
+
+   ]
     
 
     render();
