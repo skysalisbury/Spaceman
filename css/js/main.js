@@ -1,5 +1,5 @@
  /*----- constants -----*/
-// Going to need at least one object 
+// Going to need at least one object or will I? 
 
   /*----- state variables -----*/
 let winner;
@@ -9,8 +9,8 @@ let wrongGuess;
 
   /*----- cached elements  -----*/
   const msgEl = document.querySelector('h1');
-  const letterEls = [...document.querySelectorAll('#abc-container > button')];
-
+  const letterBtns = [...document.querySelectorAll('#abc-container > button')];
+  const playAgainBtn = document.getElementById('play-again');
 
   /*----- event listeners -----*/
 
