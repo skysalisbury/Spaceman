@@ -13,7 +13,7 @@ let correctBoard;
 
 
   /*----- functions -----*/
-
+init();
 
 
 
