@@ -1,10 +1,11 @@
  /*----- constants -----*/
-
+// Going to need at least one object 
 
   /*----- state variables -----*/
 let winner;
 let board;
-let correctBoard;
+let secretWord;
+let wrongGuess;
 
   /*----- cached elements  -----*/
 
@@ -26,7 +27,7 @@ function render() {
 
 
 
-    
+
 };
 
 
