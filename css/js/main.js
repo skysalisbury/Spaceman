@@ -8,6 +8,8 @@ let secretWord;
 let wrongGuess;
 
   /*----- cached elements  -----*/
+  const msgEl = document.querySelector('h1');
+  const letterEls = [...document.querySelectorAll('#abc-container > button')];
 
 
   /*----- event listeners -----*/
@@ -25,11 +27,29 @@ function init() {
 
 function render() {
 
-
+    renderMessage();
 
 
 };
 
+function renderMessage() {
+    if (wrongGuess === null) {
+        msgEl.innerHTML = `I can't wait to see the final frontier!`;
+    } if (wrongGuess === 1) {
+        msgEl.innerHTML = "What happened to my leg?";
+    } if (wrongGuess === 2) {
+        msgEl.innerHTML = `Oh no my other leg?!`;
+    } if (wrongGuess === 3) {
+        msgEl.innerHTML = `My arm!`;
+    } if (wrongGuess === 4) {
+        msgEl.innerHTML = `My other arm!`;
+    } if (wrongGuess === 5) {
+        msgEl.innerHTML = `I just wanted to go to space is this how it ends?!`;
+    } if (wrongGuess === 6) {
+        msgEl.innerHTML = `You lose, how could you do that to an astronaut!`;
+    }
+    
+};
 
 
 
