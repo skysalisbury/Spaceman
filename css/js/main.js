@@ -15,9 +15,19 @@ let correctBoard;
   /*----- functions -----*/
 init();
 
+function init() {
+   
+    
+
+    render();
+};
+
+function render() {
 
 
 
+    
+};
 
 
 
