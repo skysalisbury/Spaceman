@@ -1,12 +1,13 @@
  /*----- constants -----*/
-// Going to need at least one object or will I? 
+// Work on CATEGORIES - Needs to be in index.html
+//Work on more words.
 const U_FAILED = 6;
 const CATEGORIES = {
     JavaScript: ['EVENTS', 'VARIABLES', 'OBJECTS', 'FUNCTIONS'],
     CSS: ['FLEXBOX', 'MARGINS', 'BORDERS', 'TRANSFORM']
 };
+console.log(CATEGORIES);
 
-console.log('words', words);
 /*----- state variables -----*/
 let winner;
 let board;
@@ -18,12 +19,13 @@ let category;
 const msgEl = document.querySelector('h1');
 const letterBtns = [...document.querySelectorAll('#abc-container > button')];
 const playAgainBtn = document.getElementById('play-again');
-const words = categories[category];
+const words = CATEGORIES[category];
 
 /*----- event listeners -----*/
 
 
 /*----- functions -----*/
+//Work on all the code for init(), once that is accomplished you will feel more confident.
 init();
 
 function init() {
@@ -37,12 +39,12 @@ function init() {
 };
 
 function render() {
-
+    
     renderMessage();
-
-
+    
+    
 };
-
+//Once CATEGORIES is in HTML, and init function looks better work on the if statements.
 function renderMessage() {
     if (wrongGuess === null) {
         msgEl.innerHTML = `I can't wait to see the final frontier!`;
@@ -67,6 +69,7 @@ function renderMessage() {
 
 
 
+// console.log('words', words);
 
 //   GAME STATE IDENTIFICATION:
 // let winner; the win condition
