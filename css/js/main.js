@@ -3,8 +3,9 @@
 //Work on more words.
 const U_FAILED = 6;
 const CATEGORIES = {
-    JavaScript: ['EVENTS', 'VARIABLES', 'OBJECTS', 'FUNCTIONS'],
-    CSS: ['FLEXBOX', 'MARGINS', 'BORDERS', 'TRANSFORM']
+    JavaScript: ['EVENTS', 'VARIABLES', 'OBJECTS', 'FUNCTIONS', 'EVENTS'],
+    CSS: ['FLEXBOX', 'MARGINS', 'BORDERS', 'TRANSFORM', 'WRAP'],
+    NBA_Teams: ['NUGGETS', 'THUNDER', 'HAWKS', 'MAGIC', 'TIMBERWOLVES']
 };
 console.log(CATEGORIES);
 
