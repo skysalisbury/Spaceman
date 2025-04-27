@@ -31,12 +31,16 @@ let defCorrectGuess = document.getElementById('correct-guess');
 let categoryEl = document.getElementById('category');
 /*----- event listeners -----*/
 getLetterGuess.addEventListener('click', handleLetterGuess);
+restartBtn.addEventListener('click', init);
+categoryEl.addEventListener('change', init);
+
+
 
 /*----- functions -----*/
 //Work on all the code for init(), once that is accomplished you will feel more confident.
 init();
 
-function init() {
+function init(evt) {
     incorrectStrikes = U_FAILED;
     wrongGuess = [];
     category = categoryEl.value;
