@@ -15,6 +15,7 @@ let board;
 let wrongGuess;
 let secretWord;
 let category;
+// let wrongLetter; In case I need it
 
 /*----- cached elements  -----*/
 const msgEl = document.querySelector('h1');
@@ -24,6 +25,7 @@ const words = CATEGORIES[category];
 
 let defWrongGuess = document.getElementById('wrong-guess');
 let defCorrectGuess = document.getElementById('correct-guess');
+let categoryEl = document.getElementById('category');
 /*----- event listeners -----*/
 
 
@@ -32,11 +34,12 @@ let defCorrectGuess = document.getElementById('correct-guess');
 init();
 
 function init() {
-    
-    
-    
-    category = 
-    secretWord = words[Math.floor(Math.random() * words.length)];
+    incorrectStrikes = U_FAILED;
+    wrongGuess = [];
+    category = categoryEl.ariaValueMax;
+    let secretWordIdx = Math.floor(Math.random() * CATEGORIES[category].length)
+    secretWord = CATEGORIES[category][secretWordIdx];
+    answer = secretWord.split('')
     
     render();
 };
@@ -71,7 +74,7 @@ function renderMessage() {
 
 
 
-
+// secretWord = words[Math.floor(Math.random() * words.length)];
 // console.log('words', words);
 
 //   GAME STATE IDENTIFICATION:
