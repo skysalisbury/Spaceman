@@ -15,6 +15,9 @@ let board;
 let wrongGuess;
 let secretWord;
 let category;
+let guessWord;
+
+
 // let wrongLetter; In case I need it
 
 /*----- cached elements  -----*/
@@ -27,7 +30,7 @@ let defWrongGuess = document.getElementById('wrong-guess');
 let defCorrectGuess = document.getElementById('correct-guess');
 let categoryEl = document.getElementById('category');
 /*----- event listeners -----*/
-
+getLetterGuess.addEventListener('click', handleLetterGuess);
 
 /*----- functions -----*/
 //Work on all the code for init(), once that is accomplished you will feel more confident.
@@ -36,11 +39,11 @@ init();
 function init() {
     incorrectStrikes = U_FAILED;
     wrongGuess = [];
-    category = categoryEl.ariaValueMax;
+    category = categoryEl.value;
     let secretWordIdx = Math.floor(Math.random() * CATEGORIES[category].length)
     secretWord = CATEGORIES[category][secretWordIdx];
-    answer = secretWord.split('')
-    
+    wordAnswer = secretWord.split('')
+    guessWord = wordAnswer.map(letter => '_ &nbsp')
     render();
 };
 
@@ -70,7 +73,17 @@ function renderMessage() {
     
 };
 
-
+function handleLetterGuess(evt) {
+   let guessLetter = (evt.target.textContent);
+   if (secretWord.include(guessLetter)) {
+    answer.forEach((letter, idx) => {
+        if (guessLetter === letter) {
+            guessWord[idx] = letter
+        }
+    })
+   }
+   render();
+}
 
 
 
