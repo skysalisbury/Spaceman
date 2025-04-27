@@ -22,6 +22,8 @@ const letterBtns = [...document.querySelectorAll('#abc-container > button')];
 const playAgainBtn = document.getElementById('play-again');
 const words = CATEGORIES[category];
 
+let defWrongGuess = document.getElementById('wrong-guess');
+let defCorrectGuess = document.getElementById('correct-guess');
 /*----- event listeners -----*/
 
 
@@ -49,17 +51,17 @@ function render() {
 function renderMessage() {
     if (wrongGuess === null) {
         msgEl.innerHTML = `I can't wait to see the final frontier!`;
-    } if (wrongGuess === 1) {
+    } else if (wrongGuess === 1) {
         msgEl.innerHTML = "What happened to my leg?";
-    } if (wrongGuess === 2) {
+    } else if (wrongGuess === 2) {
         msgEl.innerHTML = `Oh no my other leg?!`;
-    } if (wrongGuess === 3) {
+    } else if (wrongGuess === 3) {
         msgEl.innerHTML = `My arm!`;
-    } if (wrongGuess === 4) {
+    } else if (wrongGuess === 4) {
         msgEl.innerHTML = `My other arm!`;
-    } if (wrongGuess === 5) {
+    } else if (wrongGuess === 5) {
         msgEl.innerHTML = `I just wanted to go to space is this how it ends?!`;
-    } if (wrongGuess === U_FAILED) {
+    } else if (wrongGuess === U_FAILED) {
         msgEl.innerHTML = `YOU FAILED, how could you let this happen to the astronaut!`;
     }
     
