@@ -7,7 +7,7 @@ const CATEGORIES = {
     CSS: ['FLEXBOX', 'MARGINS', 'BORDERS', 'TRANSFORM', 'WRAP'],
     NBA_Teams: ['NUGGETS', 'THUNDER', 'HAWKS', 'MAGIC', 'TIMBERWOLVES']
 };
-console.log(CATEGORIES);
+
 
 /*----- state variables -----*/
 let winner;
@@ -40,12 +40,12 @@ categoryEl.addEventListener('change', init);
 //Work on all the code for init(), once that is accomplished you will feel more confident.
 init();
 
-function init(evt) {
+function init() {
     incorrectStrikes = U_FAILED;
     wrongGuess = [];
     category = categoryEl.value;
-    let secretWordIdx = Math.floor(Math.random() * CATEGORIES[category].length)
-    secretWord = CATEGORIES[category][secretWordIdx];
+    let secretWordIdx = Math.floor(Math.random() * words.length)
+    secretWord = words[secretWordIdx];
     wordAnswer = secretWord.split('')
     guessWord = wordAnswer.map(letter => '_ &nbsp')
     render();
