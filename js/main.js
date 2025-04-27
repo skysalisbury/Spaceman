@@ -7,7 +7,7 @@ const CATEGORIES = {
     CSS: ['FLEXBOX', 'MARGINS', 'BORDERS', 'TRANSFORM', 'WRAP'],
     NBA_Teams: ['NUGGETS', 'THUNDER', 'HAWKS', 'MAGIC', 'TIMBERWOLVES']
 };
-
+console.log(CATEGORIES);
 
 /*----- state variables -----*/
 let winner;
@@ -16,7 +16,7 @@ let wrongGuess;
 let secretWord;
 let category;
 let guessWord;
-
+let result;
 
 // let wrongLetter; In case I need it
 
@@ -40,7 +40,7 @@ categoryEl.addEventListener('change', init);
 //Work on all the code for init(), once that is accomplished you will feel more confident.
 init();
 
-function init() {
+function init(evt) {
     incorrectStrikes = U_FAILED;
     wrongGuess = [];
     category = categoryEl.value;
@@ -48,14 +48,15 @@ function init() {
     secretWord = words[secretWordIdx];
     wordAnswer = secretWord.split('')
     guessWord = wordAnswer.map(letter => '_ &nbsp')
+    result = null;
     render();
 };
 
 function render() {
     
     renderMessage();
-    
-    
+    handleLetterGuess();
+    init();
 };
 //Once CATEGORIES is in HTML, and init function looks better work on the if statements.
 function renderMessage() {
