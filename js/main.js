@@ -30,7 +30,9 @@ let defWrongGuess = document.getElementById('wrong-guess');
 let defCorrectGuess = document.getElementById('correct-guess');
 let categoryEl = document.getElementById('category');
 /*----- event listeners -----*/
-getLetterGuess.addEventListener('click', handleLetterGuess);
+letterBtns.forEach((letterBtn) => {
+    letterBtn.addEventListener('click', handleLetterGuess);
+});
 restartBtn.addEventListener('click', init);
 categoryEl.addEventListener('change', init);
 
@@ -40,7 +42,7 @@ categoryEl.addEventListener('change', init);
 //Work on all the code for init(), once that is accomplished you will feel more confident.
 init();
 
-function init(evt) {
+function init() {
     incorrectStrikes = U_FAILED;
     wrongGuess = [];
     category = categoryEl.value;
