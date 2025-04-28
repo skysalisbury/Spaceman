@@ -21,7 +21,7 @@ let result;
 // let wrongLetter; In case I need it
 
 /*----- cached elements  -----*/
-const msgEl = document.querySelector('h1');
+const msgEl = document.querySelector("h1");
 const letterBtns = [...document.querySelectorAll('#abc-container > button')];
 const playAgainBtn = document.getElementById('play-again');
 
@@ -53,7 +53,8 @@ function init() {
     wordAnswer = secretWord.split('')
     guessWord = wordAnswer.map(letter => '_ ')
     result = null;
-    // winner = null;
+    // playAgainBtn.style.visibility = playAgainBtn ? 'visible' : 'hidden';
+    
     render();
 };
 
@@ -62,31 +63,32 @@ function render() {
     
     renderMessage();
     renderDisplayLetter();
+    // renderCheckWin();
 };
+
 //Once CATEGORIES is in HTML, and init function looks better work on the if statements.
 function renderMessage() {
-    if (wrongGuess === null) {
-        msgEl.innerHTML = `I can't wait to see the final frontier!`;
-    } else if (wrongGuess === 1) {
-        msgEl.innerHTML = "What happened to my leg?";
-    } else if (wrongGuess === 2) {
-        msgEl.innerHTML = `Oh no my other leg?!`;
-    } else if (wrongGuess === 3) {
-        msgEl.innerHTML = `My arm!`;
-    } else if (wrongGuess === 4) {
-        msgEl.innerHTML = `My other arm!`;
-    } else if (wrongGuess === 5) {
-        msgEl.innerHTML = `I just wanted to go to space is this how it ends?!`;
-    } else if (wrongGuess === U_FAILED) {
-        msgEl.innerHTML = `YOU FAILED, how could you let this happen to the astronaut!`;
-    }
-    
+    if (wrongGuess.length === 1) {
+        msgEl.textContent = "What happened to my leg?";
+    } else if (wrongGuess.length === 2) {
+        msgEl.textContent = "Oh no my other leg?!";
+    } else if (wrongGuess.length === 3) {
+        msgEl.textContent = "My arm!";
+    } else if (wrongGuess.length === 4) {
+        msgEl.textContent = "My other arm!";
+    } else if (wrongGuess.length === 5) {
+        msgEl.textContent = "I just wanted to go to space is this how it ends?!";
+    } else if (wrongGuess.length === U_FAILED) {
+        msgEl.textContent = "YOU FAILED, how could you let this happen to the astronaut!";
+    } else {
+        msgEl.textContent = "I can't wait to see the final frontier!";
+    };
 };
 
 function handleLetterGuess(evt) {
     // console.log(evt.target)
-    let guessLetter = evt.target.textContent
-//    let guessLetter = letterBtns[letterBtns.indexOf(evt.target)].textContent
+    // let guessLetter = evt.target.textContent Another way to write this code below
+   let guessLetter = letterBtns[letterBtns.indexOf(evt.target)].textContent
    console.log(guessLetter);
    if (result 
     || evt.target.tagName !== 'BUTTON' || wrongGuess.includes(guessLetter) ||
@@ -103,11 +105,9 @@ function handleLetterGuess(evt) {
    render();
 }
 
-
-
 function renderDisplayLetter() {
     displayCorrectGuessEl.innerHTML = guessWord.join('')
-    displayWrongGuessEl.innerHTML = ''
+    displayWrongGuessEl.innerHTML = " "
     wrongGuess.forEach((letter) => {
         let wrongGuessEl = document.createElement('div')
         wrongGuessEl.innerHTML = letter
@@ -115,16 +115,22 @@ function renderDisplayLetter() {
     })
 };
 
-// function renderControls() {
-//     playAgainBtn.style.visibility = result ? 'visible' : 'hidden';
+function renderCheckWin() {
+    if (result === guessWord) {
+        msgEl.innerHTML = `You Saved The Astronaut`;
+    // } if () 
+}
+}
+// function renderPlayAgainBtn() {
+//    return null;
 // }
 
 // This is wrong, I just don't know what I am coding wrong.
-function handleClickPAB(evt) {
-    const clickPlayAgainBtn = playAgainBtn === null;
-    playAgainBtn.style.visibility = result ? 'visible' : 'hidden';
+// function handleClickPAB(evt) {
+//     const clickPlayAgainBtn = playAgainBtn === null;
+//     playAgainBtn.style.visibility = result ? 'visible' : 'hidden';
      
-}
+// }
 // secretWord = words[Math.floor(Math.random() * words.length)];
 // console.log('words', words);
 
