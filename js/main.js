@@ -17,6 +17,7 @@ let secretWord;
 let category;
 let guessWord;
 let result;
+let rightGuess;
 
 // let wrongLetter; In case I need it
 
@@ -37,7 +38,7 @@ playAgainBtn.addEventListener('click', init);
 categoryEl.addEventListener('change', init);
 
 
-console.log(letterBtns);
+
 /*----- functions -----*/
 //Work on all the code for init(), once that is accomplished you will feel more confident.
 // Need to fix play again button and continue working on handleLetterGuess evtListener
@@ -53,7 +54,7 @@ function init() {
     wordAnswer = secretWord.split('')
     guessWord = wordAnswer.map(letter => '_ ')
     result = null;
-    // playAgainBtn.style.visibility = playAgainBtn ? 'visible' : 'hidden';
+    // winner = null;
     
     render();
 };
@@ -63,7 +64,7 @@ function render() {
     
     renderMessage();
     renderDisplayLetter();
-    // renderCheckWin();
+    renderCheckWin();
 };
 
 //Once CATEGORIES is in HTML, and init function looks better work on the if statements.
@@ -88,20 +89,24 @@ function renderMessage() {
 function handleLetterGuess(evt) {
     // console.log(evt.target)
     // let guessLetter = evt.target.textContent Another way to write this code below
-   let guessLetter = letterBtns[letterBtns.indexOf(evt.target)].textContent
-   console.log(guessLetter);
-   if (result 
-    || evt.target.tagName !== 'BUTTON' || wrongGuess.includes(guessLetter) ||
-    guessWord.includes(guessLetter)) return
-   if (secretWord.includes(guessLetter)) {
-    wordAnswer.forEach((letter, idx) => {
-        if (guessLetter === letter) {
-            guessWord[idx] = letter
+    let guessLetter = letterBtns[letterBtns.indexOf(evt.target)].textContent
+    if (wrongGuess.length >= incorrectStrikes || guessLetter === wrongGuess 
+        || guessLetter === guessWord) {
+        render(); 
+        return;
+    }
+    if (result 
+        || evt.target.tagName !== 'BUTTON' || wrongGuess.includes(guessLetter) ||
+        guessWord.includes(guessLetter)) return
+        if (secretWord.includes(guessLetter)) {
+            wordAnswer.forEach((letter, idx) => {
+                if (guessLetter === letter) {
+                    guessWord[idx] = letter
+                }
+            })
+        } else {
+            wrongGuess.push(guessLetter)
         }
-    })
-   } else {
-    wrongGuess.push(guessLetter)
-   }
    render();
 }
 
@@ -116,8 +121,11 @@ function renderDisplayLetter() {
 };
 
 function renderCheckWin() {
-    if (result === guessWord) {
-        msgEl.innerHTML = `You Saved The Astronaut`;
+    // console.log(guessWord.join(''), secretWord)
+    if (guessWord.join('') === secretWord) {
+        msgEl.textContent = "You won! You saved the astronaut!";
+    // wrongGuess ? 'false' : 'true';
+
     // } if () 
 }
 }
