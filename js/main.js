@@ -26,8 +26,8 @@ const letterBtns = [...document.querySelectorAll('#abc-container > button')];
 const playAgainBtn = document.getElementById('play-again');
 
 
-let defWrongGuess = document.getElementById('wrong-guess');
-let defCorrectGuess = document.getElementById('correct-guess');
+let displayWrongGuessEl = document.getElementById('display-wrong-guess');
+let displayCorrectGuessEl = document.getElementById('display-correct-guess');
 let categoryEl = document.getElementById('category');
 /*----- event listeners -----*/
 letterBtns.forEach((letterBtn) => {
@@ -37,25 +37,23 @@ playAgainBtn.addEventListener('click', init);
 categoryEl.addEventListener('change', init);
 
 
-console.log(categoryEl);
+console.log(letterBtns);
 /*----- functions -----*/
 //Work on all the code for init(), once that is accomplished you will feel more confident.
 // Need to fix play again button and continue working on handleLetterGuess evtListener
 init();
 
 function init() {
-    // playAgainBtn.removeChild;
     incorrectStrikes = U_FAILED;
     wrongGuess = [];
     category = categoryEl.value;
-    console.log(category);
     const words = CATEGORIES[category];
     let secretWordIdx = Math.floor(Math.random() * words.length)
     secretWord = words[secretWordIdx];
     wordAnswer = secretWord.split('')
-    guessWord = wordAnswer.map(letter => document.getElementById('board').append('_ '))
-    
+    guessWord = wordAnswer.map(letter => '_ ')
     result = null;
+    // winner = null;
     render();
 };
 
@@ -63,7 +61,7 @@ function init() {
 function render() {
     
     renderMessage();
-    
+    renderDisplayLetter();
 };
 //Once CATEGORIES is in HTML, and init function looks better work on the if statements.
 function renderMessage() {
@@ -86,13 +84,15 @@ function renderMessage() {
 };
 
 function handleLetterGuess(evt) {
-   let guessLetter = (evt.target.textContent)
-   if (result || evt.target.tagName !== 'button' || wrongGuess.includes(guessLetter) ||
-    guessWord.includes(guessLetter)) {
-        return;
-    }
-   if (secretWord.include(guessLetter)) {
-    answer.forEach((letter, idx) => {
+    // console.log(evt.target)
+    let guessLetter = evt.target.textContent
+//    let guessLetter = letterBtns[letterBtns.indexOf(evt.target)].textContent
+   console.log(guessLetter);
+   if (result 
+    || evt.target.tagName !== 'BUTTON' || wrongGuess.includes(guessLetter) ||
+    guessWord.includes(guessLetter)) return
+   if (secretWord.includes(guessLetter)) {
+    wordAnswer.forEach((letter, idx) => {
         if (guessLetter === letter) {
             guessWord[idx] = letter
         }
@@ -105,6 +105,26 @@ function handleLetterGuess(evt) {
 
 
 
+function renderDisplayLetter() {
+    displayCorrectGuessEl.innerHTML = guessWord.join('')
+    displayWrongGuessEl.innerHTML = ''
+    wrongGuess.forEach((letter) => {
+        let wrongGuessEl = document.createElement('div')
+        wrongGuessEl.innerHTML = letter
+        displayWrongGuessEl.appendChild(wrongGuessEl)
+    })
+};
+
+// function renderControls() {
+//     playAgainBtn.style.visibility = result ? 'visible' : 'hidden';
+// }
+
+// This is wrong, I just don't know what I am coding wrong.
+function handleClickPAB(evt) {
+    const clickPlayAgainBtn = playAgainBtn === null;
+    playAgainBtn.style.visibility = result ? 'visible' : 'hidden';
+     
+}
 // secretWord = words[Math.floor(Math.random() * words.length)];
 // console.log('words', words);
 
