@@ -86,13 +86,19 @@ function renderMessage() {
 };
 
 function handleLetterGuess(evt) {
-   let guessLetter = (evt.target.textContent);
+   let guessLetter = (evt.target.textContent)
+   if (result || evt.target.tagName !== 'button' || wrongGuess.includes(guessLetter) ||
+    guessWord.includes(guessLetter)) {
+        return;
+    }
    if (secretWord.include(guessLetter)) {
     answer.forEach((letter, idx) => {
         if (guessLetter === letter) {
             guessWord[idx] = letter
         }
     })
+   } else {
+    wrongGuess.push(guessLetter)
    }
    render();
 }
