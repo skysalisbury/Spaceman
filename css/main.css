@@ -17,33 +17,83 @@
 
   #drop-down {
     color: #FFF8E7;
+    display: flex;
+    flex-direction: wrap;
+    max-width: 150px;
+    padding: 10px;
   }
+    #category {
+      display: flex;
+      max-width: 110px;
+      justify-content: center;
+      border-radius: 10px;
+    }
 
   h1 {
     display: flex;
+    /* font-size: ; */
+    justify-content: center;
   }
+
   
   section#display-correct-guess {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 40px;
+    font-size: 50px;
+    padding-bottom: 10px;
     /* position: relative;
     z-index: -1; */
   }
-  section#abc-container {
+
+#abc-format-area {
+  display: flex;
+  justify-content: center;
+}
+
+  #abc-container {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align-last: center;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: wrap; 
+    max-width: 225px;
+    max-height: 200px;
+    cursor: pointer;
+    
+    
+    /* margin: 0; */
     /* position: absolute;
     z-index: 1; */
     
   }
+      .abcs {
+        display: flex;
+        width: 25px;
+        height: 25px;
+        border-radius: 7.5px;
+        
+        /* justify-content: space-between; */
+    }
 
   section#display-wrong-guess {
     display: flex;
+    display: flex;
+    justify-content: baseline;
+    /* max-width: 225px; */
+    /* max-height: 500px; */
+    border: #FFF8E7;
     /* align-items: center;
     justify-content: center; */
   }
+
+  #play-again {
+    display: flex;
+    justify-content: baseline;
+    max-width: 225px;
+    max-height: 200px;
+    border: #FFF8E7;
+    border-radius: 10px;
+  }
+
