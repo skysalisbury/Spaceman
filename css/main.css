@@ -1,3 +1,20 @@
 * {
     box-sizing: border-box;
   }
+
+  body {
+    background-color: #8A2BE2;
+    /* background-color: #301934; */
+    /* font-family: */
+    margin: 0;
+  }
+
+  header {
+    color: #FFF8E7;
+    text-align: center;
+    font-size: 40px;
+  }
+
+  #drop-down {
+    color: #FFF8E7;
+  }
