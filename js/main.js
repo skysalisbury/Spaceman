@@ -10,7 +10,7 @@ const CATEGORIES = {
 
 
 /*----- state variables -----*/
-let winner;
+
 let board;
 let wrongGuess;
 let secretWord;
@@ -25,7 +25,7 @@ let rightGuess;
 const msgEl = document.querySelector("h1");
 const letterBtns = [...document.querySelectorAll('#abc-container > button')];
 const playAgainBtn = document.getElementById('play-again');
-// const imgPath = `imgs/spaceman-0${wrongGuess.length}`;
+const spacemanEl = document.getElementById('spaceman');
 
 let displayWrongGuessEl = document.getElementById('display-wrong-guess');
 let displayCorrectGuessEl = document.getElementById('display-correct-guess');
@@ -65,7 +65,7 @@ function render() {
     renderMessage();
     renderDisplayLetter();
     renderCheckWin();
-
+    
 };
 
 //Once CATEGORIES is in HTML, and init function looks better work on the if statements.
@@ -85,8 +85,10 @@ function renderMessage() {
     } else {
         msgEl.textContent = "I can't wait to see the final frontier!";
     };
+    spacemanEl.src = `../assets/spaceman-${wrongGuess.length}.png`;
 };
 
+//
 function handleLetterGuess(evt) {
     // console.log(evt.target)
     // let guessLetter = evt.target.textContent Another way to write this code below
@@ -95,6 +97,7 @@ function handleLetterGuess(evt) {
         || guessLetter === guessWord) {
         render(); 
         return;
+        //handleLetterGuess is the function for guessing letters, its the logic for right and wrong guesses.
     }
     if (result 
         || evt.target.tagName !== 'BUTTON' || wrongGuess.includes(guessLetter) ||
@@ -111,6 +114,7 @@ function handleLetterGuess(evt) {
    render();
 }
 
+
 function renderDisplayLetter() {
     displayCorrectGuessEl.innerHTML = guessWord.join('')
     displayWrongGuessEl.innerHTML = " "
@@ -119,13 +123,18 @@ function renderDisplayLetter() {
         wrongGuessEl.innerHTML = letter
         displayWrongGuessEl.appendChild(wrongGuessEl)
     })
+    //renderDisplayLetter is the function for displaying the letters on 
+    // the browser and for connecting the correct guesses which are strings, joining them into one 
+    // word once it is guessed correctly.
 };
 
 function renderCheckWin() {
     // console.log(guessWord.join(''), secretWord)
     if (guessWord.join('') === secretWord) {
         msgEl.textContent = "You won! You saved the astronaut!";
-    // wrongGuess ? 'false' : 'true';
+    // renderCheckWin is the function is the logic to determine a winner 
+    // here I use the guessWord which is the secretWord broken into string letters equaling the 
+    // secretWord which is the answer
 
     // } if () 
 }
