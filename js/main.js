@@ -25,7 +25,7 @@ let rightGuess;
 const msgEl = document.querySelector("h1");
 const letterBtns = [...document.querySelectorAll('#abc-container > button')];
 const playAgainBtn = document.getElementById('play-again');
-
+// const imgPath = `imgs/spaceman-0${wrongGuess.length}`;
 
 let displayWrongGuessEl = document.getElementById('display-wrong-guess');
 let displayCorrectGuessEl = document.getElementById('display-correct-guess');
@@ -65,6 +65,7 @@ function render() {
     renderMessage();
     renderDisplayLetter();
     renderCheckWin();
+
 };
 
 //Once CATEGORIES is in HTML, and init function looks better work on the if statements.
