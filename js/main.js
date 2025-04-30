@@ -34,6 +34,7 @@ let categoryEl = document.getElementById('category');
 letterBtns.forEach((letterBtn) => {
     letterBtn.addEventListener('click', handleLetterGuess);
 });
+
 playAgainBtn.addEventListener('click', init);
 categoryEl.addEventListener('change', init);
 
@@ -54,7 +55,6 @@ function init() {
     wordAnswer = secretWord.split('')
     guessWord = wordAnswer.map(letter => '_ ')
     result = null;
-    // winner = null;
     
     render();
 };
@@ -90,7 +90,6 @@ function renderMessage() {
 
 //
 function handleLetterGuess(evt) {
-    // console.log(evt.target)
     // let guessLetter = evt.target.textContent Another way to write this code below
     let guessLetter = letterBtns[letterBtns.indexOf(evt.target)].textContent
     if (wrongGuess.length >= incorrectStrikes || guessLetter === wrongGuess 
@@ -129,7 +128,6 @@ function renderDisplayLetter() {
 };
 
 function renderCheckWin() {
-    // console.log(guessWord.join(''), secretWord)
     if (guessWord.join('') === secretWord) {
         msgEl.textContent = "You won! You saved the astronaut!";
     // renderCheckWin is the function is the logic to determine a winner 

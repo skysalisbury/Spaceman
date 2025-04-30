@@ -3,13 +3,13 @@
   }
 
   body {
-    background-color: #8A2BE2;
-    /* background-color: #301934; */
-    /* font-family: */
+    background-image: url("https://img.freepik.com/free-vector/hand-painted-watercolor-galaxy-background_52683-63441.jpg?ga=GA1.1.1690154860.1746024311&semt=ais_hybrid&w=740");
+    background-repeat: no-repeat;
     margin: 0;
     display: flex;
     align-items: center;
     height: 100vh;
+    background-size: cover;
   }
 
   main {
@@ -18,7 +18,7 @@
     align-items: center;
     justify-content: space-around;
     width: 100%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
   }
 
   header {
@@ -31,6 +31,8 @@
   #cat-selector {
     /* margin-left: -800px; */
     border: 1px solid black;
+    margin: 1%;
+
   }
   #drop-down {
     color: #FFF8E7;
@@ -38,6 +40,7 @@
     flex-direction: wrap;
     max-width: 150px;
     padding: 10px;
+    /* margin: 10; */
     
   }
     #category {
@@ -61,7 +64,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 50px;
+    font-size: 65px;
     padding-bottom: 10px;
     color: #FFF8E7;
     
@@ -81,9 +84,9 @@
     text-align-last: center;
     flex-wrap: wrap;
     flex-direction: wrap; 
-    max-width: 225px;
-    max-height: 200px;
-    cursor: pointer;
+    max-width: 400px;
+    max-height: 700px;
+    /* cursor: pointer; */
     
     
     /* margin: 0; */
@@ -96,6 +99,7 @@
         width: 25px;
         height: 25px;
         border-radius: 7.5px;
+       
         
         /* justify-content: space-between; */
     }
@@ -104,14 +108,10 @@
     display: flex;
     display: flex;
     justify-content: left;
-    /* max-width: 225px; */
-    /* max-height: 500px; */
     border: #FFF8E7;
-    /* border: 1px solid black; */
-    /* align-items: center;
-    justify-content: center; */
     font-size: 40px;
     color: #FFF8E7;
+
   }
 
   #play-again {
@@ -122,10 +122,11 @@
     border: #FFF8E7;
     border-radius: 10px;
     border: 1px solid black;
+    margin-top: 10%;
   }
 
   #spaceman {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
   }
 
