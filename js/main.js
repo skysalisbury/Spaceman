@@ -55,6 +55,9 @@ function init() {
     wordAnswer = secretWord.split('')
     guessWord = wordAnswer.map(letter => '_ ')
     result = null;
+    letterBtns.forEach((letterBtn) => {
+        letterBtn.disabled = false;
+    })
     
     render();
 };
@@ -83,7 +86,7 @@ function renderMessage() {
     } else if (wrongGuess.length === U_FAILED) {
         msgEl.textContent = "YOU FAILED! How could you let this happen to the astronaut!";
     } else {
-        msgEl.textContent = "I can't wait to see the final frontier!";
+        msgEl.textContent = "Oh no I'm lost in space please save me!";
     };
     spacemanEl.src = `assets/spaceman-${wrongGuess.length}.png`;
 };
@@ -91,6 +94,7 @@ function renderMessage() {
 //
 function handleLetterGuess(evt) {
     // let guessLetter = evt.target.textContent Another way to write this code below
+    evt.target.disabled = true
     let guessLetter = letterBtns[letterBtns.indexOf(evt.target)].textContent
     if (wrongGuess.length >= incorrectStrikes || guessLetter === wrongGuess 
         || guessLetter === guessWord) {
