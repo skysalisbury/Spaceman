@@ -85,7 +85,7 @@ function renderMessage() {
     } else {
         msgEl.textContent = "I can't wait to see the final frontier!";
     };
-    spacemanEl.src = `/assets/spaceman-${wrongGuess.length}.png`;
+    spacemanEl.src = `assets/spaceman-${wrongGuess.length}.png`;
 };
 
 //
