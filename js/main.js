@@ -3,7 +3,7 @@
 //Work on more words.
 const U_FAILED = 6;
 const CATEGORIES = {
-    js: ['EVENTS', 'VARIABLES', 'OBJECTS', 'FUNCTIONS', 'EVENTS'],
+    js: ['EVENTS', 'VARIABLES', 'OBJECTS', 'FUNCTIONS', 'ELEMENTS'],
     css: ['FLEXBOX', 'MARGINS', 'BORDERS', 'TRANSFORM', 'WRAP'],
     nba_teams: ['NUGGETS', 'THUNDER', 'HAWKS', 'MAGIC', 'TIMBERWOLVES']
 };
@@ -81,11 +81,11 @@ function renderMessage() {
     } else if (wrongGuess.length === 5) {
         msgEl.textContent = "I just wanted to go to space is this how it ends?!";
     } else if (wrongGuess.length === U_FAILED) {
-        msgEl.textContent = "YOU FAILED, how could you let this happen to the astronaut!";
+        msgEl.textContent = "YOU FAILED! How could you let this happen to the astronaut!";
     } else {
         msgEl.textContent = "I can't wait to see the final frontier!";
     };
-    spacemanEl.src = `../assets/spaceman-${wrongGuess.length}.png`;
+    spacemanEl.src = `/assets/spaceman-${wrongGuess.length}.png`;
 };
 
 //
