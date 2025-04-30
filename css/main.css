@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family:  'Space Mono';
   }
 
   body {
@@ -128,5 +129,6 @@
   #spaceman {
     width: 300px;
     height: 300px;
+    margin-right: 10%;
   }
 
