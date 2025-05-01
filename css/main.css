@@ -21,6 +21,7 @@
     align-items: center;
     justify-content: space-around;
     width: 100%;
+    margin-right: 15%;
   }
 
   header {
@@ -32,7 +33,7 @@
   #cat-selector {
     /* margin-left: -800px; */
     /* border: 1px solid black; */
-    margin: 1%;
+    margin: 5%;
 
   }
   #drop-down {
