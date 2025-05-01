@@ -1,4 +1,4 @@
- /*----- constants -----*/
+/*----- constants -----*/
 const U_FAILED = 6;
 const CATEGORIES = {
     js: ['EVENTS', 'VARIABLES', 'OBJECTS', 'FUNCTIONS', 'ELEMENTS'],
@@ -51,16 +51,16 @@ function init() {
     letterBtns.forEach((letterBtn) => {
         letterBtn.disabled = false;
     })
-    
+
     render();
 };
 
 function render() {
-    
+
     renderMessage();
     renderDisplayLetter();
     renderCheckWin();
-    
+
 };
 
 function renderMessage() {
@@ -83,28 +83,26 @@ function renderMessage() {
 };
 
 function handleLetterGuess(evt) {
-    // let guessLetter = evt.target.textContent Another way to write this code below
     evt.target.disabled = true
     let guessLetter = letterBtns[letterBtns.indexOf(evt.target)].textContent
-    if (wrongGuess.length >= incorrectStrikes || guessLetter === wrongGuess 
+    if (wrongGuess.length >= incorrectStrikes || guessLetter === wrongGuess
         || guessLetter === guessWord) {
-        render(); 
+        render();
         return;
-        //handleLetterGuess is the function for guessing letters, its the logic for right and wrong guesses.
     }
-    if (result 
+    if (result
         || evt.target.tagName !== 'BUTTON' || wrongGuess.includes(guessLetter) ||
         guessWord.includes(guessLetter)) return
-        if (secretWord.includes(guessLetter)) {
-            wordAnswer.forEach((letter, idx) => {
-                if (guessLetter === letter) {
-                    guessWord[idx] = letter
-                }
-            })
-        } else {
-            wrongGuess.push(guessLetter)
-        }
-   render();
+    if (secretWord.includes(guessLetter)) {
+        wordAnswer.forEach((letter, idx) => {
+            if (guessLetter === letter) {
+                guessWord[idx] = letter
+            }
+        })
+    } else {
+        wrongGuess.push(guessLetter)
+    }
+    render();
 }
 
 
@@ -116,9 +114,6 @@ function renderDisplayLetter() {
         wrongGuessEl.innerHTML = letter
         displayWrongGuessEl.appendChild(wrongGuessEl)
     })
-    //renderDisplayLetter is the function for displaying the letters on 
-    // the browser and for connecting the correct guesses which are strings, joining them into one 
-    // word once it is guessed correctly.
 };
 
 function renderCheckWin() {

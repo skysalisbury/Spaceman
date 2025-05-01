@@ -1,120 +1,122 @@
 * {
-    box-sizing: border-box;
-    font-family:  'Space Mono';
-  }
+  box-sizing: border-box;
+  font-family: 'Space Mono';
+}
 
-  body {
-    background-image: url("https://img.freepik.com/free-vector/hand-painted-watercolor-galaxy-background_52683-63441.jpg?ga=GA1.1.1690154860.1746024311&semt=ais_hybrid&w=740");
-   /* background-image: url("https://media.nature.com/lw767/magazine-assets/d41586-024-02277-w/d41586-024-02277-w_27325526.jpg"); */
-    background-repeat: no-repeat;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    height: 100vh;
-    background-size: cover;
-    
-  }
+body {
+  background-image: url("https://img.freepik.com/free-vector/hand-painted-watercolor-galaxy-background_52683-63441.jpg?ga=GA1.1.1690154860.1746024311&semt=ais_hybrid&w=740");
+  /* background-image: url("https://media.nature.com/lw767/magazine-assets/d41586-024-02277-w/d41586-024-02277-w_27325526.jpg"); */
+  background-repeat: no-repeat;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  background-size: cover;
 
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    margin-right: 15%;
-  }
+}
 
-  header {
-    color: #FFF8E7;
-    text-align: center;
-    font-size: 40px;
-  }
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin-right: 15%;
+}
 
-  #cat-selector {
-    /* margin-left: -800px; */
-    /* border: 1px solid black; */
-    margin: 5%;
+header {
+  color: #FFF8E7;
+  text-align: center;
+  font-size: 40px;
+}
 
-  }
-  #drop-down {
-    color: #FFF8E7;
-    display: flex;
-    flex-direction: wrap;
-    max-width: 150px;
-    padding: 10px;
-  }
-    #category {
-      display: flex;
-      max-width: 110px;
-      justify-content: center;
-      border-radius: 10px;
-      border: 1px solid black;
-     
-    }
+#cat-selector {
+  /* margin-left: -800px; */
+  /* border: 1px solid black; */
+  margin: 5%;
 
-  h1 {
-    display: flex;
-    /* font-size: ; */
-    justify-content: center;
-    color: #FFF8E7;
-  }
+}
 
-  
-  section#display-correct-guess {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 65px;
-    padding-bottom: 10px;
-    color: #FFF8E7;
-  }
+#drop-down {
+  color: #FFF8E7;
+  display: flex;
+  flex-direction: wrap;
+  max-width: 150px;
+  padding: 10px;
+}
+
+#category {
+  display: flex;
+  max-width: 110px;
+  justify-content: center;
+  border-radius: 10px;
+  border: 1px solid black;
+
+}
+
+h1 {
+  display: flex;
+  /* font-size: ; */
+  justify-content: center;
+  color: #FFF8E7;
+}
+
+
+section#display-correct-guess {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 65px;
+  padding-bottom: 10px;
+  color: #FFF8E7;
+}
 
 #abc-format-area {
   display: flex;
   justify-content: center;
 }
 
-  #abc-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align-last: center;
-    flex-wrap: wrap;
-    flex-direction: wrap; 
-    max-width: 400px;
-    max-height: 700px;
-  }
-      .abcs {
-        display: flex;
-        width: 25px;
-        height: 25px;
-        border-radius: 7.5px;
-    }
+#abc-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align-last: center;
+  flex-wrap: wrap;
+  flex-direction: wrap;
+  max-width: 400px;
+  max-height: 700px;
+}
 
-  section#display-wrong-guess {
-    display: flex;
-    display: flex;
-    justify-content: left;
-    border: #FFF8E7;
-    font-size: 40px;
-    color: #FFF8E7;
+.abcs {
+  display: flex;
+  width: 25px;
+  height: 25px;
+  border-radius: 7.5px;
+}
 
-  }
+section#display-wrong-guess {
+  display: flex;
+  display: flex;
+  justify-content: left;
+  border: #FFF8E7;
+  font-size: 40px;
+  color: #FFF8E7;
 
-  #play-again {
-    display: flex;
-    justify-content: left;
-    max-width: 225px;
-    max-height: 200px;
-    border: #FFF8E7;
-    border-radius: 10px;
-    border: 1px solid black;
-    margin-top: 10%;
-  }
+}
 
-  #spaceman {
-    width: 300px;
-    height: 300px;
-    margin-right: 10%;
-  }
+#play-again {
+  display: flex;
+  justify-content: left;
+  max-width: 225px;
+  max-height: 200px;
+  border: #FFF8E7;
+  border-radius: 10px;
+  border: 1px solid black;
+  margin-top: 10%;
+}
 
+#spaceman {
+  width: 300px;
+  height: 300px;
+  margin-right: 10%;
+}
