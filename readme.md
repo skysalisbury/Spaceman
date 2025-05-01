@@ -7,7 +7,11 @@ Spaceman is a word guessing game based on the now frowned upon hangman game. You
 
 ## Attributions
 * [Space Astronaut Images](https://replit.com/@jim_clark/Spaceman-Images#script.js)
+
 * [Image of space as background image](https://www.freepik.com/free-vector/hand-painted-watercolor-galaxy-background_14237502.htm#fromView=search&page=1&position=23&uuid=3e6f3a90-655d-435c-9258-567de4fa5110&query=space) 
+
+* [Flying saucer favicon](https://favicon.io/emoji-favicons/flying-saucer/)
+
 
 ## Technologies Used
 * Javascript
