@@ -17,3 +17,4 @@ Spaceman is a word guessing game based on the now frowned upon hangman game. You
 ## Next Steps
 * Make the keys on the keyboard interact with the letter buttons.
 * Add a hint function. Eventually add a voice function for accessibility purposes.
+* Add a timer function that once it hits zero the user loses, to speed up the game.
