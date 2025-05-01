@@ -5,6 +5,10 @@ Spaceman is a word guessing game based on the now frowned upon hangman game. You
 ![Spaceman screenshot 1-Idle Game](assets/Screenshot%20of%20Spaceman.png)
 ![Spaceman screenshot 2-Active gameplay](assets/Screenshot%20of%20Spaceman%20part%20two.png) 
 
+## Attributions
+* [Space Astronaut Images](https://replit.com/@jim_clark/Spaceman-Images#script.js)
+* [Image of space as background image](https://www.freepik.com/free-vector/hand-painted-watercolor-galaxy-background_14237502.htm#fromView=search&page=1&position=23&uuid=3e6f3a90-655d-435c-9258-567de4fa5110&query=space) 
+
 ## Technologies Used
 * Javascript
 * HTML
