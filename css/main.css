@@ -5,7 +5,6 @@
 
 body {
   background-image: url("https://img.freepik.com/free-vector/hand-painted-watercolor-galaxy-background_52683-63441.jpg?ga=GA1.1.1690154860.1746024311&semt=ais_hybrid&w=740");
-  /* background-image: url("https://media.nature.com/lw767/magazine-assets/d41586-024-02277-w/d41586-024-02277-w_27325526.jpg"); */
   background-repeat: no-repeat;
   margin: 0;
   display: flex;
@@ -31,8 +30,6 @@ header {
 }
 
 #cat-selector {
-  /* margin-left: -800px; */
-  /* border: 1px solid black; */
   margin: 5%;
 
 }
@@ -56,7 +53,6 @@ header {
 
 h1 {
   display: flex;
-  /* font-size: ; */
   justify-content: center;
   color: #FFF8E7;
 }
