@@ -1,13 +1,10 @@
  /*----- constants -----*/
-// Work on CATEGORIES - Needs to be in index.html
-//Work on more words.
 const U_FAILED = 6;
 const CATEGORIES = {
     js: ['EVENTS', 'VARIABLES', 'OBJECTS', 'FUNCTIONS', 'ELEMENTS'],
     css: ['FLEXBOX', 'MARGINS', 'BORDERS', 'TRANSFORM', 'WRAP'],
     nba_teams: ['NUGGETS', 'THUNDER', 'HAWKS', 'MAGIC', 'TIMBERWOLVES']
 };
-
 
 /*----- state variables -----*/
 
@@ -18,8 +15,6 @@ let category;
 let guessWord;
 let result;
 let rightGuess;
-
-// let wrongLetter; In case I need it
 
 /*----- cached elements  -----*/
 const msgEl = document.querySelector("h1");
@@ -41,8 +36,6 @@ categoryEl.addEventListener('change', init);
 
 
 /*----- functions -----*/
-//Work on all the code for init(), once that is accomplished you will feel more confident.
-// Need to fix play again button and continue working on handleLetterGuess evtListener
 init();
 
 function init() {
@@ -62,7 +55,6 @@ function init() {
     render();
 };
 
-
 function render() {
     
     renderMessage();
@@ -71,7 +63,6 @@ function render() {
     
 };
 
-//Once CATEGORIES is in HTML, and init function looks better work on the if statements.
 function renderMessage() {
     if (wrongGuess.length === 1) {
         msgEl.textContent = "What happened to my leg?";
@@ -91,7 +82,6 @@ function renderMessage() {
     spacemanEl.src = `assets/spaceman-${wrongGuess.length}.png`;
 };
 
-//
 function handleLetterGuess(evt) {
     // let guessLetter = evt.target.textContent Another way to write this code below
     evt.target.disabled = true
@@ -134,28 +124,5 @@ function renderDisplayLetter() {
 function renderCheckWin() {
     if (guessWord.join('') === secretWord) {
         msgEl.textContent = "You won! You saved the astronaut!";
-    // renderCheckWin is the function is the logic to determine a winner 
-    // here I use the guessWord which is the secretWord broken into string letters equaling the 
-    // secretWord which is the answer
-
-    // } if () 
-}
-}
-// function renderPlayAgainBtn() {
-//    return null;
-// }
-
-// This is wrong, I just don't know what I am coding wrong.
-// function handleClickPAB(evt) {
-//     const clickPlayAgainBtn = playAgainBtn === null;
-//     playAgainBtn.style.visibility = result ? 'visible' : 'hidden';
-     
-// }
-// secretWord = words[Math.floor(Math.random() * words.length)];
-// console.log('words', words);
-
-//   GAME STATE IDENTIFICATION:
-// let winner; the win condition
-// let board; The board is the board of letters for the word game.
-// let correctBoard; The board that stores the correct letters once they are guessed/input
-// 
+    }
+};

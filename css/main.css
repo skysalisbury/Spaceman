@@ -5,12 +5,14 @@
 
   body {
     background-image: url("https://img.freepik.com/free-vector/hand-painted-watercolor-galaxy-background_52683-63441.jpg?ga=GA1.1.1690154860.1746024311&semt=ais_hybrid&w=740");
+   /* background-image: url("https://media.nature.com/lw767/magazine-assets/d41586-024-02277-w/d41586-024-02277-w_27325526.jpg"); */
     background-repeat: no-repeat;
     margin: 0;
     display: flex;
     align-items: center;
     height: 100vh;
     background-size: cover;
+    
   }
 
   main {
@@ -19,19 +21,17 @@
     align-items: center;
     justify-content: space-around;
     width: 100%;
-    /* border: 1px solid black; */
   }
 
   header {
     color: #FFF8E7;
     text-align: center;
     font-size: 40px;
-    /* border: 1px solid black; */
   }
 
   #cat-selector {
     /* margin-left: -800px; */
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin: 1%;
 
   }
@@ -41,8 +41,6 @@
     flex-direction: wrap;
     max-width: 150px;
     padding: 10px;
-    /* margin: 10; */
-    
   }
     #category {
       display: flex;
@@ -68,9 +66,6 @@
     font-size: 65px;
     padding-bottom: 10px;
     color: #FFF8E7;
-    
-    /* position: relative;
-    z-index: -1; */
   }
 
 #abc-format-area {
@@ -87,22 +82,12 @@
     flex-direction: wrap; 
     max-width: 400px;
     max-height: 700px;
-    /* cursor: pointer; */
-    
-    
-    /* margin: 0; */
-    /* position: absolute;
-    z-index: 1; */
-    
   }
       .abcs {
         display: flex;
         width: 25px;
         height: 25px;
         border-radius: 7.5px;
-       
-        
-        /* justify-content: space-between; */
     }
 
   section#display-wrong-guess {

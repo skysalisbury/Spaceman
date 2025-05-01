@@ -2,7 +2,8 @@
 Spaceman is a word guessing game based on the now frowned upon hangman game. You are given a secretword that you have to guess by inputing letters to save the astronaut. If you correctly guess the word before you have six incorrect guesses you win otherwise you lose and fail to save the astronaut.
 
 ## Screenshot
-![Spaceman](assets/game%20of%20spaceman.png) 
+![Spaceman screenshot 1-Idle Game](assets/Screenshot%20of%20Spaceman.png)
+![Spaceman screenshot 2-Active gameplay](assets/Screenshot%20of%20Spaceman%20part%20two.png) 
 
 ## Technologies Used
 * Javascript
@@ -11,7 +12,7 @@ Spaceman is a word guessing game based on the now frowned upon hangman game. You
 * Replit - Spaceman Astronaut Images
 
 ## Getting Started
-
+* [Spaceman](https://skysalisbury.github.io/Spaceman/)
 
 ## Next Steps
 
